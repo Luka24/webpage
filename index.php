@@ -7,27 +7,22 @@
     <script src="assets/js/dogodki.php"></script>
     <title>Nogometni klub Zlata žoga</title>
 </head>
-
-
 <body>
-
-
     <div class="zozan-ovijalni">
         <header>
             <div id="logo">
                 <img src="assets/images/logo.png" alt="Logotip">
             </div>
             <nav>
-                <ul>
-                        <li><a href="#domov1">Domov</a></li> 
-                        <li><a href="#dejavnosti1">Dejavnosti</a></li>
-                        <li><a href="#pricevanja1">Pričevanja</a></li>
-                        <li><a href="#obvestila">Obvestila</a></li>
+                <ul id="menu">
+                    <li><a href="#domov1">Domov</a></li> 
+                    <li><a href="#dejavnosti1">Dejavnosti</a></li>
+                    <li><a href="#pricevanja1">Pričevanja</a></li>
+                    <li><a href="#obvestila">Obvestila</a></li>
                 </ul>
             </nav>
+            <button id="menu-toggle">☰</button> 
         </header>
-
-      
         <main>
             <div id="glavna">
                 <div class="ovijalni">
@@ -36,9 +31,7 @@
                         <h1>Nogometni klub Zlata žoga</h1>
                         <p>Nogometni klub Zlata žoga je klub, kjer je vsi uživamo ob igranju te lepe igre.</p>
                     </div>
-                    <div class="grafika-prvi">
-                        
-                    </div>
+                    <div class="grafika-prvi"></div>
                 </div>
             </div>
             <section id="predstavitev">
@@ -74,21 +67,16 @@
                     </div>
                 </div>
             </section>
-
             <section id="pricevanja">
                 <div class="lik lik1"><img src="assets/images/lik1.png" alt="lik 1"></div>
                 <div class="lik lik2"><img src="assets/images/lik2.png" alt="lik 2"></div>
                 <div class="lik lik3"><img src="assets/images/lik3.png" alt="lik 3"></div>
-
-                <div id ="komentarji" class="ovijalni">
+                <div id="komentarji" class="ovijalni">
                     <div id="pricevanja1"></div>
                     <h2 class="naslov-razdelka">Mnenja članov</h2>
-                    <div id="izjave" class="pricevanja-ovijalni">
-                        </div>
-                     
+                    <div id="izjave" class="pricevanja-ovijalni"></div>
                 </div>
             </section>
-
             <section id="obvestila">
                 <div class="ovijalni-mali">
                     <div class="novice-opis">
@@ -100,102 +88,102 @@
                             <input type="email" required id="emailVnesen" class="novice-vnos" placeholder="Vnesite svoj e-poštni naslov">
                             <button type="submit" id="emailGumb" class="novice-gumb" name="prijava" value="poslan">PRIJAVA</button>
                         </form>
-
                     </div>
                 </div>
             </section>
-    </main>
-
-    <footer>
-        <div class="ovijalni noga-znotraj svetla-pisava">
-            <div class="noga-logo">
-                <a href="#logo"><img src="assets/images/logo.png" alt="Logotip"></a>
+        </main>
+        <footer>
+            <div class="ovijalni noga-znotraj svetla-pisava">
+                <div class="noga-logo">
+                    <a href="#logo"><img src="assets/images/logo.png" alt="Logotip"></a>
+                </div>
+                <ul class="noga-povezave">
+                    <li><a href="#glavna">Domov</a></li>
+                    <li><a href="#predstavitev">Dejavnosti</a></li>
+                    <li><a href="#pricevanja">Pričevanja</a></li>
+                    <li><a href="#obvestila">Obvestila</a></li>
+                </ul>
+                <ul class="noga-druzabna">
+                    <li><img src="assets/images/ikonaFB.svg" alt="Logotip FB"></li>
+                    <li><img src="assets/images/ikonaIG.svg" alt="Logotip IG"></li>
+                    <li><img src="assets/images/ikonaLI.svg" alt="Logotip LI"></li>
+                </ul>
+                <div class="noga-copyright">
+                    &copy; 2024 Nogometni klub Zlata žoga
+                </div>
             </div>
-            <ul class="noga-povezave">
-                <li><a href="#glavna">Domov</a></li>
-                <li><a href="#predstavitev">Dejavnosti</a></li>
-                <li><a href="#pricevanja">Pričevanja</a></li>
-                <li><a href="#obvestila">Obvestila</a></li>
-            </ul>
-            <ul class="noga-druzabna">
-                <li><img src="assets/images/ikonaFB.svg" alt="Logotip FB"></li>
-                <li><img src="assets/images/ikonaIG.svg" alt="Logotip IG"></li>
-                <li><img src="assets/images/ikonaLI.svg" alt="Logotip LI"></li>
-            </ul>
-            <div class="noga-copyright">
-                &copy; 2024 Nogometni klub Zlata žoga
-            </div>
-        </div>
-    </footer>
+        </footer>
     </div>
-
     <script>
-
         /*1*/
         let izjave = document.getElementById("izjave");
-
         dogodki.forEach(element =>{
-            
             let izjava = document.createElement('div');
             izjava.classList.add("izjava");
             izjave.appendChild(izjava);
-
             let html = "";
             html += `<div class="img-area"> <img src="${element.slika}" alt="Slika"></div>`;
             html += `<div class="izjava-glava">${element.ime}</div>`;
             html += `<div class="izjava-opis">${element.izjava}</div>`;
             html += `<div class="izjava-noga">${element.datum}</div>`;
-            
             izjava.innerHTML = html;
         });
-
         /*2*/
-
-        
         let obrazecNovic = document.getElementById("obrazecNovic");
         let form = document.getElementById("form");
         let gumb = document.getElementById("emailGumb");
-
         let zapriGumb = document.createElement("button");
         zapriGumb.innerText = "Zapri";
         zapriGumb.setAttribute("type", "button");
         zapriGumb.setAttribute("id", "zapriGumb");
         zapriGumb.setAttribute("value", "zaprto");
         zapriGumb.setAttribute("name", "zapriGumb");   
-        
         let gumbEmail = document.getElementById("emailGumb");
         function akcija(event) {
             let emailVnos = document.getElementById("emailVnesen");
             if(!emailVnos.checkValidity()){
-                    return;
+                return;
             }
-
-
             event.preventDefault();
             let pozdrav = document.createElement("div");
             form.classList.add("skrij");
-
             let pozdravText = document.createElement("p");
             pozdravText.classList.add("odstavek-razdelka");
             let pozdravH2 = document.createElement("h2");
             pozdravH2.classList.add("naslov-razdelka");
             pozdravH2.innerText = `Dobrodošli, ${emailVnos.value}!`;
-            pozdravText.innerText = `Hvala za prijavo na novice. Stran je trenutno v izdelavi.`;
+            pozdravText.innerText = `Hvala za prijavo na novice.`;
             pozdrav.appendChild(pozdravH2);
             pozdrav.appendChild(pozdravText);
-            pozdrav.appendChild(zapriGumb);
-            pozdrav.setAttribute("id", "pozdrav");
-
             obrazecNovic.appendChild(pozdrav);
+            obrazecNovic.appendChild(zapriGumb);
+        }
+        gumb.addEventListener("click", akcija);
+        function osveziStran(event){
+            location.reload();
+        }
+        zapriGumb.addEventListener("click", osveziStran);
 
+        let prikazniMenu = document.getElementById("menu-toggle");
+            let menu = document.getElementById("menu");
+            let linki = document.querySelectorAll("a");
 
-        };
-        zapriGumb.addEventListener("click", function(){
-            let dodanObrazec = document.getElementById("pozdrav");
-            dodanObrazec.classList.add("skrij");
-        });
-        gumbEmail.addEventListener('click', akcija);
+            prikazniMenu.addEventListener("click", function(Event) {
+                    
+                    menu.classList.toggle("show");
+
+                    linki.forEach(link =>{
+                        link.addEventListener("click", function(){
+                            menu.classList.remove("show");
+                        });
+                    });
+
+                    document.addEventListener("click", function(event){
+                        if(!menu.contains(event.target) && event.target !== prikazniMenu){
+                            menu.classList.remove("show");
+                        }
+                    })
+            });
     </script>
-
 </body>
 </html>
