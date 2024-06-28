@@ -1,6 +1,6 @@
 Here is the link to webpage:  [link](https://sais.fnm.um.si/~polanicl/projekt/naloga7/)
 
-Here is link to admin page: [link](https://sais.fnm.um.si/~polanicl/projekt/naloga7/stranSkrbnika.php)
+Here is the link to admin page: [link](https://sais.fnm.um.si/~polanicl/projekt/naloga7/stranSkrbnika.php)
 # Nogometni klub Zlata žoga
 
 This is a project to show my knowledge and ability to build web pages.
