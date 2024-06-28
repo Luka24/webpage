@@ -524,3 +524,364 @@ header{
     visibility: hidden;
     top: -160px;
 }
+
+
+.izjava img {
+    max-width: 120px;
+    max-height: 120px;
+}
+
+
+#pricevanja {
+    position: relative;
+    margin-bottom: 100px; 
+}
+
+.pricevanja-ovijalni {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 50px;
+    gap: 50px;
+    margin-bottom: 100px; 
+}
+
+
+#obvestila {
+    background-color: var(--color4);
+    padding-top: 100px;
+}
+
+.izjava {
+    width: 250px;
+    height: 300px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--najsvetlejsa);
+    z-index: 100;
+    border: 2px solid;
+    border-color: var(--color4);
+    position: relative;
+    margin-bottom: 30px; 
+}
+
+
+
+
+#menu-toggle{
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header #logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    header button#menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    header ul {
+        display: none; 
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        left: -89vw;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    }
+
+    header ul li {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    header nav {
+        position: relative;
+        width: 100%;
+    }
+
+    header ul.show {
+        display: flex; 
+    }
+
+
+    header ul.show {
+        right: 0;
+        left: auto;
+    }
+
+
+    #menu li {
+        visibility: visible;
+    }
+
+
+    .ovijalni {
+        padding: 10px;
+    }
+
+    .ovijalni-mali, .noga-znotraj {
+        padding: 10px;
+    }
+
+    .opis-prvi, .predstavitev-vsebina {
+        flex-direction: column;
+    }
+
+    .predstavitev {
+        margin-bottom: 20px;
+    }
+
+    .ikona img {
+        transform: scale(0.5);
+    }
+
+    .pricevanja-ovijalni {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .izjava {
+        margin-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .noga-logo {
+        margin-bottom: 10px;
+    }
+
+    .noga-povezave, .noga-druzabna {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .noga-povezave li, .noga-druzabna li {
+        margin: 5px 0;
+    }
+    .opis-prvi {
+        min-width: 300px;
+        max-width: 100%;
+        padding-right: 20px;
+        word-wrap: break-word;
+    }
+    img[alt = "lik1"] {
+        left: calc(10%);
+        top: calc(10% + 290px);
+    }
+  
+    #pricevanja {
+        position: relative;
+        margin-bottom: 160vh; 
+    }
+
+    #obvestila {
+        padding-top: 5vh; 
+    }
+
+    .lik1 {
+        left: calc(50% - 250px);
+        top: calc(50% - 250px);
+        transform: scale(0.6);
+    }
+    
+    .lik2 {
+        left: calc(10% + 20px);
+        top: calc(50% + 170px);
+    }
+    
+    .lik3 {
+        left: calc(70% + 20px);
+        top: calc(90% + 180px);
+        
+    }
+    
+#obvestila {
+    margin-top: 50px; 
+}
+
+.predstavitev-vsebina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+
+.predstavitev {
+    margin-top: 20px;
+    margin-left: 0;
+    height: 250px;
+    width: 180px;
+    box-shadow: 0px 0px 10px 10px var(--najsvetlejsa);
+    padding: 20px 20px;
+}
+.predstavitev:nth-child(2n) {
+    margin-top: 20px;
+    margin-left: 0;
+    
+}
+
+#glavna .opis-prvi {
+    width: 100%;
+    max-width: 600px;
+    min-width: 0;
+    background-image: url("../images/grafika1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+.grafika-prvi {
+    display: none;
+}
+.opis-prvi {
+    padding-right: 0px;
+    
+}
+    
+    nav ul {
+        display: none;
+    }
+    #menu-toggle {
+        display: block; 
+    }
+    
+    #menu-toggle:checked + nav ul {
+        display: block;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--najsvetlejsa);
+        padding: 20px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    nav ul li a {
+        color: var(--temna);
+        text-decoration: none;
+        font-size: 1.2rem;
+        display: block;
+        padding: 10px 0;
+    }
+
+}
+
+
+@media (max-width: 768px) and (min-width: 601px) {
+    body {
+        font-size: 15px;
+    }
+    #glavna .opis-prvi {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+        background-image: url("../images/grafika1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(255, 255, 255, 0.2); 
+    
+    }
+    .grafika-prvi {
+        display: none;
+    }
+    .opis-prvi {
+        padding-right: 0px;
+        
+    }
+    .pricevanja-ovijalni {
+        grid-row-gap: 30px; 
+        margin-bottom: 50px; 
+    }
+    
+    .izjava {
+        margin-bottom: 20px; 
+    }
+    .predstavitev-vsebina {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+    }
+    
+    .predstavitev {
+        text-align: center; 
+     
+        width: 100%;
+    }
+    .predstavitev:nth-child(2n) {
+        margin-top: 0px;
+        margin-left: 0;
+        
+    }
+    .pricevanja-ovijalni {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px; 
+        justify-content: center; 
+    }
+    
+    .izjava {
+        width: 100%; 
+        max-width: 300px; 
+        padding: 20px; 
+        text-align: center; 
+    }
+    #obvestila {
+        background-color: var(--color4);
+        padding-top: 20px; 
+    }
+       
+#obvestila {
+    margin-top: 50px; 
+}
+
+#pricevanja {
+    position: relative;
+    margin-bottom: 100vh; 
+}
+
+#obvestila {
+    padding-top: 10vh; 
+}
+
+
+}
+
+@media (min-width: 769px) {
+    body {
+        font-size: 16px;
+    }
+}
